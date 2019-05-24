@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/usermodule/UserWishList.css">
+    <link rel="stylesheet" href="/css/partialcss/UserHeader.css">
+    <link rel="stylesheet" href="/css/partialcss/BooksCategories.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+
+<body>
+    <%- include ../partials/UserHeader.ejs%>
+    <div class="container body">
+        <div class="row">
+            <%- include ../partials/BooksCategories.ejs%>
+            <div class="col-xl-9 wishlist-container">
+                <h2 class="wishlist-heading" id="wishlistHeading">YourWishlist</h2>
+                <div class="book-items-headings on-items">
+                    <div class="container">
+                        <div class="row wishlist-items-heading-row">
+                            <div class="col-sm-6 wishlist-items-heading-container">
+                                <h2 class="wishlist-items-heading">ITEM(S)</h2>
+                            </div>
+                            <div class="col-sm-1 wishlist-items-heading-container ">
+                                <h2 class="wishlist-items-heading">Price</h2>
+                            </div>
+                            <div class="col-sm-1 wishlist-items-heading-container">
+                                <h2 class="wishlist-items-heading">Avail</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wishlist-items">
+                    <h2 class="empty-wishlist center-align" style="display:none">Your Wishlist is empty</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/js/partialjs/UserHeader.js"></script>
+    <script src="/js/usermodule/UserWishList.js"></script>
+</body>
+
+</html>

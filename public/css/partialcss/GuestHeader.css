@@ -1,0 +1,111 @@
+/*header styling*/
+.container-header{
+    padding: 0px;
+}
+header{
+    background-color: #000000;
+}
+.book-store-image-container{
+    padding: 20px;
+    display: inline-block;
+}
+.book-store-image{
+    height:70px;
+    width: 180px;
+}
+.nav-items-container{
+    padding-top: 26px;
+    padding-right: 20px;
+}
+.welcome-title{
+    font-family: 'Courier New', Courier, monospace;
+    color:white;
+    text-align: right;
+    padding-right: 20px;
+}
+.nav-items{
+    list-style-type: none;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    overflow: hidden;
+}
+.nav-item{
+    font-size: 14px;
+    float: right;
+}
+.nav-links{
+    display: block;
+    padding: 10px 20px;
+}
+.nav-links:hover{
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #bec3c4;
+    color: #000000;
+}
+
+
+/* login modal styling*/
+.modal-content{
+    border-radius: 0px;
+    padding: 30px;
+}
+#registrationSuccessful{
+    display: none;
+    margin-bottom: 10px;
+    color: #de2728;
+    font-family: 'Courier New', Courier, monospace;
+}
+#loginFailed{
+    display: none;
+    margin-bottom: 10px;
+    color: #de2728;
+    font-family: 'Courier New', Courier, monospace;
+}
+.login-modal-username-title{
+    font-size: 18px;
+    color: #1d1d1d;
+}
+.login-modal-username-title,.login-modal-password-title{
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+}
+.login-modal-username-input,.login-modal-password-input{
+    display: block;
+    width: 100%;
+    height: 40px;
+}
+.login-modal-username,.login-modal-password{
+    padding-bottom: 30px;
+}
+.login-modal-password-title{
+    display: inline-block;
+}
+.login-modal-password-forgot{
+    color: #de2728;
+    font-size: 14px;
+    float: right;
+}
+.login-modal-password-forgot:hover{
+    cursor: pointer;
+}
+.required-star{
+    color: #de2728;
+}
+.login-button{
+    border-radius: 0px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.login-modal-register-title{
+    font-size: 22px;
+    color: #1d1d1d;
+    margin-bottom: 0px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    border-top: 1px solid #cacfd0;
+}
+.register-button{
+    border-radius: 0px;
+    font-size: 20px;
+}

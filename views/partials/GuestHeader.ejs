@@ -1,0 +1,41 @@
+<header class="container container-header">
+    <div class="row">
+        <div class="col-xl-3">
+            <div class="book-store-image-container">
+                <a href="/guest/home"><img src="/images/BookStoreImage.jpg" class="book-store-image"
+                        alt="BookStore"></a>
+            </div>
+        </div>
+        <div class="col-xl-9">
+            <nav class="nav-items-container">
+                <h5 class="welcome-title" id="welcomeTitle">Welcome <span class="welcome-title-username"
+                        id="welcomeTitleUsername">Guest</span></h5>
+                <ul class="nav-items">
+                    <li class="nav-item"><a class="nav-links loginModal" href="">LOGIN</a></li>
+                    <li class="nav-item"><a class="nav-links" href="/guest/booksearch">SEARCH</a></li>
+                    <li class="nav-item"><a class="nav-links" href="/guest/home">HOME</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<div class="modal fade" id="loginModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <h6 id="registrationSuccessful">You are registered. Please login to contine.</h6>
+            <div class="login-modal-username">
+                <h5 class="login-modal-username-title">User Name <span class="required-star">*</span></h5>
+                <input type="text" class="login-modal-username-input" id="loginModalUsername" />
+            </div>
+            <div class="login-modal-password">
+                <h5 class="login-modal-password-title">Password <span class="required-star">*</span></h5>
+                <span class="login-modal-password-forgot" id="loginModalForgotPassword">Forgot Password?</span>
+                <input type="text" class="login-modal-password-input" id="loginModalPassword" />
+                <h6 id="loginFailed">Wrong Username or password</h6>
+            </div>
+            <button class="btn btn-primary login-button" id="loginButton">Log In</button>
+            <h5 class="login-modal-register-title">Don't have an account yet?</h5>
+            <button class="btn btn-danger register-button" id="registerButton">Register</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,187 @@
+body{
+    background-color: #cacfd0;
+}
+
+/* book search header and body functinaltiy*/
+.account-container{
+    background-color: #dfe5e6;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.tab {
+    overflow: hidden;   
+}
+.tablinks{
+    background-color: #d4dadb;
+    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+    border: none;
+}
+  /* Style the buttons that are used to open the tab content */
+.tab button {
+    float: left;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+   /* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #f5f5f5;
+}
+   /* Create an active/current tablink class */
+.tab button.active {
+    background-color: #f5f5f5;
+}
+   /* Style the tab content */
+.tabcontent {
+    background-color: #f5f5f5;
+    display: none;
+}
+
+
+/* Transaction history tab*/
+/*container of headings in cart modal*/
+.ordered-items-heading-row{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+}
+.ordered-items-heading-container{
+    padding: 0px;
+}
+.ordered-items-heading{
+    font-size: 16px;
+    color: #1d1d1d;
+    margin-bottom: 0px;
+}
+.center-align{
+    text-align: center;
+}
+.margin-left{
+    margin-left: -30px;
+}
+.empty-ordered{
+    padding: 50px 0px;
+}
+.th-book-row{
+    margin-left: 20px;
+    margin-right: 20px;
+    border-top: 1px dashed #bec3c4;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.book-image-container{
+    padding: 0px;
+}
+.book-image{
+    height: 130px;
+    width: 100px;
+}
+.book-title{
+    font-size: 15px;
+    color: #1d1d1d;
+    display: block;
+}
+.book-author{
+    padding-top: 10px;
+    font-size: 12px;
+    color: #1d1d1d;
+    display: inline-block;
+}
+.book-title-author-container{
+    padding: 0px;
+    margin-left: -15px;
+}
+.book-price-container,.book-qty-container,.book-date-container,.book-status-container{
+    line-height: 120px;
+    padding: 0px;
+    text-align: center;
+}
+.book-price{
+    font-size: 15px;
+    color: #1d1d1d;
+    display: inline-block;
+}
+.book-qty{
+    font-size: 15px;
+    color: #1d1d1d;
+    display: inline-block;
+}
+.book-date{
+    font-size: 15px;
+    color: #1d1d1d;
+    display: inline-block;
+}
+.book-status{
+    font-size: 15px;
+    color: #1d1d1d;
+    display: inline-block;
+}
+.order-number{
+    padding-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0px;
+}
+
+
+/* Edit Information Tab*/
+.register-form{
+    padding-top: 30px;
+    padding-left: 40px;
+}
+
+/*form labels and inputs styling*/
+.form-group{
+    margin-bottom: 32px;
+}
+.col-form-label{
+    font-size: 15px;
+    color: #1d1d1d;
+}
+.form-control{
+    display: inline-block;
+    width: 50%;
+    border-radius: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f5f5f5;
+}
+.required-star{
+    color: #de2728;
+}
+.submitButton{
+    border-radius: 0px;
+    font-size: 22px;
+    width: 35%;
+    margin-bottom: 20px;
+}
+.form-text{
+    font-size: 12px;
+}
+#reTypePasswordSmall , #preferredLoginNameSmall{
+    color: #de2728;
+}
+
+
+/*Order Status Tracking*/
+.orderStatusTrackingContent{
+    padding: 20px 30px;
+}
+.orderStatusTrackingHeading{
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+.orderStatusTrackingInput{
+    font-size: 16px;
+    color: #000000;
+    margin-right: 20px;
+}
+.orderStatusTrackingButton{
+    font-size: 15px;
+    border-radius: 0px;
+}
+.orderStatusTrackingResult{
+padding-top: 20px;
+font-size: 15px;
+}

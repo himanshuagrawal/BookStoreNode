@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/usermodule/UserOrderConfirmation.css">
+    <link rel="stylesheet" href="/css/partialcss/UserHeader.css">
+    <link rel="stylesheet" href="/css/partialcss/BooksCategories.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+
+<body>
+    <%- include ../partials/UserHeader.ejs%>
+    <div class="container body">
+        <div class="row">
+            <%- include ../partials/BooksCategories.ejs%>
+            <div class="col-xl-9 order-confirmation-container">
+                <h2 class="order-confirmation-heading" id="orderconfirmationHeading">Order Confirmation</h2>
+                <h2 class="order-confirmation-address-heading" id="orderconfirmationAddressHeading">SHIPPING ADDRESS
+                </h2>
+                <div class="address">
+                    <p class="address-field fullName"></p>
+                    <p class="address-field address1"></p>
+                    <p class="address-field address2"></p>
+                    <p class="address-field city-state"></p>
+                    <p class="address-field phoneNumber"></p>
+                    <p class="address-field mobileNumber"></p>
+                </div>
+                <div class="order-summary">
+                    <h2 class="order-confirmation-summary-heading" id="orderconfirmationSummaryHeading">ORDER SUMMARY
+                    </h2>
+                    <p class="order-number"></p>
+                </div>
+                <div class="container order-container">
+                    <div class="order-items-headings">
+                        <div class="row order-items-heading-row">
+                            <div class="col-sm-6 order-items-heading-container">
+                                <h2 class="order-items-heading">BOOK NAME</h2>
+                            </div>
+                            <div class="col-sm-2 order-items-heading-container">
+                                <h2 class="order-items-heading">QUANTITY</h2>
+                            </div>
+                            <div class="col-sm-2 order-items-heading-container center-align">
+                                <h2 class="order-items-heading">PRICE</h2>
+                            </div>
+                            <div class="col-sm-2 order-items-heading-container center-align">
+                                <h2 class="order-items-heading">SUB TOTAL</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-item-container">
+                        
+                    </div>
+                </div>
+                <div class="message-summary">
+                    <p class="order-confirmation-message">Thanks a lot for shopping. We have received your request. You
+                        can check your orders in transaction history.
+                    </p>
+                    <button class="btn btn-primary shop-more-button">SHOP MORE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/js/partialjs/UserHeader.js"></script>
+    <script src="/js/usermodule/UserOrderConfirmation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/usermodule/UserHome.css">
+    <link rel="stylesheet" href="/css/partialcss/UserHeader.css">
+    <link rel="stylesheet" href="/css/partialcss/BooksCategories.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+
+<body>
+    <%- include ../partials/UserHeader.ejs%>
+    <div class="container body">
+        <div class="row">
+            <%- include ../partials/BooksCategories.ejs%>
+            <div class="col-xl-9 book-result">
+                <h2 class="book-result-heading" id="bookResultHeading">Top Rated</h2>
+                <div class="book-container" id="bookContainer">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/js/jquery/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/js/partialjs/UserHeader.js"></script>
+    <script src="/js/usermodule/UserHome.js"></script>
+</body>
+
+</html>

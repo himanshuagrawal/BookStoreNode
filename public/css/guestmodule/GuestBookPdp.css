@@ -1,0 +1,301 @@
+body{
+    background-color: #cacfd0;
+}
+
+/*Books pdp body Styling*/
+.book-pdp{
+    background-color: #dfe5e6;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+/* Books details styling*/
+.book-details{
+    padding-bottom: 30px;
+}
+.book-details-img-section{
+    padding-right: 0px;
+    padding-left: 10px;
+}
+.book-details-description-section{
+    padding-left: 0px;
+}
+.book-details-img{
+    height: 240px;
+}
+.book-details-title{
+    font-size: 28px;
+}
+.book-details-author{
+    font-size: 18px;
+}
+.book-details-review{
+    padding-bottom: 8px;
+}
+.book-details-review-rating{
+    font-size: 12px;
+    color: #1d1d1d;
+}
+.book-details-review-comment{
+    font-size: 12px;
+    color: #de2728;
+    text-decoration: underline;
+}
+.book-details-review-comment:hover{
+    cursor: pointer;
+}
+.book-details-page-count{
+    font-size: 14px;
+}
+.book-details-options-wishlist{
+    font-size: 12px;
+    color: #de2728;
+    text-decoration: underline;
+}
+.options-symbol{
+    color: #de2728;
+     font-size: 18px;
+     font-weight: 700;
+}
+#optionsSeparator{
+    padding: 10px;
+}
+.book-details-options-writereview{
+    font-size: 12px;
+    color: #de2728;
+    text-decoration: underline;
+}
+.book-details-options-wishlist:hover, .book-details-options-writereview:hover{
+cursor: pointer;
+}
+
+
+/* Description*/
+
+.book-description{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #cacfd0;
+    margin-bottom: 30px;
+}
+.book-description-heading{
+    font-size: 22px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+}
+.book-description-content{
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 0px;
+}
+
+/* Comments Styling */
+.book-comments{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #cacfd0;
+    margin-bottom: 30px;
+}
+.book-comments-heading{
+    font-size: 22px;
+    margin-bottom: 0px;
+    display: inline-block;
+    padding-right:20px; 
+}
+.book-comments-readall{
+    font-size: 12px;
+    color: #de2728;
+    text-decoration: underline;
+}
+.book-comments-readall:hover{
+    cursor: pointer;
+}
+.book-comments-commentlist-comment{
+    padding-top: 20px;
+}
+.book-comment-username{
+    font-size: 16px;
+    display: inline-block;
+    padding-right:20px;
+}
+.book-comment-rating{
+    display: inline-block;
+    padding-right: 20px;
+}
+.book-comment-date{
+    font-size: 14px;
+    display: inline-block;
+}
+.book-comment-content{
+    font-size: 14px;
+    line-height: 1.5;
+    padding-top: 10px;
+}
+
+
+/* Modal Pops Up and its content*/
+.modal-content{
+    border-radius: 0px;
+    padding: 20px;
+}
+.review-modal-rating-inputs{
+    padding-left: 30px;
+}
+.review-modal-heading{
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+.review-modal-comment-title{
+    font-size: 14px;
+}
+.review-modal-rating-comment{
+    width: 100%;
+    height: 210px;;
+    background-color: #dfe5e6;
+    resize: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+.empty-comment{
+    color: #de2728;
+    margin-bottom: 0px;
+    display: none;
+}
+.valid-comment{
+    color: #21addd;
+    display: none;
+    margin-bottom: 0px;
+}
+.review-modal-book-title{
+    font-size: 18px;
+    padding-top: 10px;
+}
+.review-modal-book-author{
+    font-size: 13px;
+}
+.review-modal-rating-title{
+    font-size: 14px;
+    padding-top: 10px;
+    margin-bottom: 0px;
+}
+.close-options{
+    float: right;
+}
+.close-options-button{
+    border-radius: 0px;
+    font-size: 18px;
+    background-color: #21addd;
+    margin-top: -14px;
+}
+.close-options-link{
+    font-size: 14px;
+    color: #de2728;
+    text-decoration: underline;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+.close-options-link:hover{
+    cursor: pointer;
+}
+
+
+/* button below card styling*/
+.book-price-cart-buy{
+    margin-top: 25px;
+    background-color: #21addd;
+    width: 32%;
+}
+.book-price-cart-buy:hover{
+cursor: pointer;
+}
+.book-price-tag{
+    margin-bottom: 0px;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 8px 20px;
+    display: inline-block;
+}
+.book-cart-btn{
+    background-color: #1a8ab0;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 9px 10px;
+    float: right;
+}
+
+
+/*Stars Rating display Code*/
+.book-details-review-rating-stars{
+    display: inline-block;
+    margin-right: 5px;
+}
+.stars-outer {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+  }
+  .stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .stars-outer::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #bec3c4;
+  }
+  .stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #21addd;
+  }
+
+
+/* Stars rating input code*/
+.rating {
+    float:left;
+  }
+  
+  /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+  .rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+  }
+  
+  .rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:150%;
+    line-height:1.2;
+    color:#ddd;
+  }
+  .rating:not(:checked) > label:before {
+    content: '★ ';
+  }
+  .rating > input:checked ~ label {
+    color: #21addd;
+  }
+  .rating:not(:checked) > label:hover,
+  .rating:not(:checked) > label:hover ~ label {
+    color: #21addd;
+  }
+  .rating > input:checked + label:hover,
+  .rating > input:checked + label:hover ~ label,
+  .rating > input:checked ~ label:hover,
+  .rating > input:checked ~ label:hover ~ label,
+  .rating > label:hover ~ input:checked ~ label {
+    color: #21addd;
+  }
+  .rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+  }

@@ -1,0 +1,178 @@
+/*header styling*/
+.container-header{
+    padding: 0px;
+}
+header{
+    background-color: #000000;
+}
+.book-store-image-container{
+    padding: 20px;
+    display: inline-block;
+}
+.book-store-image{
+    height:70px;
+    width: 180px;
+}
+.nav-items-container{
+    padding-top: 26px;
+    padding-right: 20px;
+}
+.welcome-title{
+    font-family: 'Courier New', Courier, monospace;
+    color:white;
+    text-align: right;
+    padding-right: 20px;
+}
+.nav-items{
+    list-style-type: none;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    overflow: hidden;
+}
+.nav-item{
+    font-size: 14px;
+    float: right;
+}
+.nav-links{
+    display: block;
+    padding: 10px 20px;
+}
+.nav-links:hover{
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #bec3c4;
+    color: #000000;
+}
+.cart-icon{
+    padding-left: 20px;
+    position: relative;
+}
+.cart-icon:hover{
+    cursor: pointer;
+}
+.cart-count{
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid #de2728;
+    border-radius: 10px;
+    background-color: #de2728;
+    color: white;
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    padding: 1px;
+}
+
+
+/* cart modal styling*/
+.modal-content{
+    border-radius: 0px;
+    padding: 30px 20px;
+}
+.cart-modal-heading{
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+.center-align{
+    text-align: center;
+}
+/*container of headings in cart modal*/
+.book-items-heading-row{
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #bec3c4;
+    margin-bottom: 20px;
+}
+.book-items-heading-container{
+    padding: 0px;
+}
+.book-items-heading{
+    font-size: 16px;
+    color: #1d1d1d;
+    margin-bottom: 0px;
+}
+ 
+/*container of books in cart modal*/
+.no-book-cart{
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 90px;
+    border-bottom: 1px dashed #bec3c4;
+    border-top: 1px dashed #bec3c4;
+    margin-bottom: 20px;
+}
+.book-container-items-row{
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #bec3c4;
+    margin-bottom: 20px;
+}
+.book-container-items{
+    padding: 0px;
+}
+.cart-book-img{
+    width: 78px;
+    height: 108px;
+}
+.cart-book-title{
+    font-size: 15px;
+    color: #1d1d1d;
+    display: inline-block;
+    padding-left: 25px;
+}
+input[type="Number"]{
+    width: 40px;
+}
+.cart-book-price{
+    font-size: 15px;
+    color: #1d1d1d;
+    margin: 0px;
+    padding: 5px 0px;
+}
+.cart-book-total{
+    font-size: 15px;
+    color: #1d1d1d;
+    margin: 0px;
+    padding: 5px 0px;
+}
+.cart-book-remove-button{
+    border-radius: 0px;
+    padding: 5px 10px;
+    
+}
+
+/*Footer*/
+.total-amount-row{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #bec3c4;
+}
+.cart-total-amount-title-container{
+    text-align: right;
+    padding: 0px;
+}
+.cart-total-amount-title{
+    font-size: 16px;
+    color: #1d1d1d;
+    margin: 0px;
+}
+.cart-total-amount{
+    font-size: 16px;
+    color: #de2728;
+    margin: 0px;
+}
+.btn-container{
+    padding: 0px;
+}
+.btn-container-checkout{
+    padding: 0px;
+    text-align: center;
+}
+.continue-shopping-button{
+    border-radius: 0px;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+.checkout-button{
+    border-radius: 0px;
+    padding: 5px 25px;
+    font-size: 20px;
+}

@@ -1,0 +1,76 @@
+<header class="container container-header">
+    <div class="row">
+        <div class="col-xl-3">
+            <div class="book-store-image-container">
+                <a href="/user/home"><img src="/images/BookStoreImage.jpg" class="book-store-image" alt="BookStore"></a>
+            </div>
+        </div>
+        <div class="col-xl-9">
+            <nav class="nav-items-container">
+                <h5 class="welcome-title" id="welcomeTitle">Welcome <span class="welcome-title-username"
+                        id="welcomeTitleUsername"></span><i class="fas fa-shopping-cart cart-icon"><span
+                            class="cart-count"></span></i></h5>
+                <ul class="nav-items">
+                    <li class="nav-item"><a class="nav-links" href="/user/logout">LOGOUT</a></li>
+                    <li class="nav-item"><a class="nav-links" href="/user/wishlist">WISHLIST</a></li>
+                    <li class="nav-item"><a class="nav-links" href="/user/account">ACCOUNT</a></li>
+                    <li class="nav-item"><a class="nav-links" href="/user/booksearch">SEARCH</a></li>
+                    <li class="nav-item"><a class="nav-links" href="/user/home">HOME</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="modal fade" id="cartModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <h2 class="cart-modal-heading" id="reviewModalHeading">Your Cart</h2>
+            <div class="container">
+                <div class="book-items-headings on-items" >
+                    <div class="row book-items-heading-row">
+                        <div class="col-sm-5 book-items-heading-container">
+                            <h2 class="book-items-heading">ITEM(S)</h2>
+                        </div>
+                        <div class="col-sm-1 book-items-heading-container">
+                            <h2 class="book-items-heading">QTY</h2>
+                        </div>
+                        <div class="col-sm-2 book-items-heading-container center-align">
+                            <h2 class="book-items-heading">PRICE</h2>
+                        </div>
+                        <div class="col-sm-2 book-items-heading-container center-align">
+                            <h2 class="book-items-heading">SUB TOTAL</h2>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="no-book-cart no-items" style="display: none">Your Cart is Empty !</h2>
+                <div class="book-container">
+                </div>
+                <div class="total-amount on-items">
+                    <div class="row total-amount-row">
+                        <div class="offset-sm-4 col-sm-4 cart-total-amount-title-container">
+                            <h2 class="cart-total-amount-title">Total Amount Payable :</h2>
+                        </div>
+                        <div class="col-sm-2 cart-total-amount-container center-align" id="totalAmount">
+                            <h2 class="cart-total-amount">$ 150</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-class">
+                    <div class="row">
+                        <div class="col-sm-5 btn-container">
+                                <button class="btn btn-primary continue-shopping-button">Close and continue shopping</button>
+                        </div>
+                        <div class="col-sm-3 offset-sm-4 btn-container-checkout on-items">
+                                <button class="btn btn-primary checkout-button">Checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

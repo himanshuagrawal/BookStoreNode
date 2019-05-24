@@ -1,0 +1,28 @@
+/*Books Categories Styling*/
+.book-categories{
+    background-color: #ffffff;
+    padding-top: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.book-categories-heading{
+    font-size: 22px;
+    padding-left: 20px;
+    padding-bottom: 12px;
+    color: #040707;
+}
+.book-categories-list-items{
+    
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    color: #1d1d1d;
+    display: block;
+}
+.book-categories-list-items:hover{
+    background-color: #dfe5e6;
+    cursor: pointer;
+    text-decoration: none;
+    color: #1d1d1d;
+}

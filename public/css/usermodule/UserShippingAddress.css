@@ -1,0 +1,55 @@
+body{
+    background-color: #cacfd0;
+}
+
+/* book search header and body functinaltiy*/
+.shipping-address-container{
+    background-color: #dfe5e6;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.shipping-address-heading{
+    font-size: 22px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+    color: #040707;
+    border-bottom: 1px solid #cacfd0;
+}
+
+/* form body edititng */
+.register-form{
+    padding-top: 30px;
+    padding-left: 40px;
+}
+
+/*form labels and inputs styling*/
+.form-group{
+    margin-bottom: 32px;
+}
+.col-form-label{
+    font-size: 15px;
+    color: #1d1d1d;
+}
+.form-control{
+    display: inline-block;
+    width: 50%;
+    border-radius: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f5f5f5;
+}
+.required-star{
+    color: #de2728;
+}
+.submitButton{
+    border-radius: 0px;
+    font-size: 22px;
+    width: 35%;
+}
+.form-text{
+    font-size: 12px;
+}
+#reTypePasswordSmall , #preferredLoginNameSmall{
+    color: #de2728;
+}

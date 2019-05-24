@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Book PDP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/usermodule/UserBookPdp.css">
+    <link rel="stylesheet" href="/css/partialcss/UserHeader.css">
+    <link rel="stylesheet" href="/css/partialcss/BooksCategories.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+
+<body>
+    <%- include ../partials/UserHeader.ejs%>
+    <div class="container">
+        <div class="row">
+            <%- include ../partials/BooksCategories.ejs%>
+            <div class="col-xl-9 book-pdp" _id="<%=obj._id%>" id="parent">
+                <div class="row book-details">
+                    <div class="col-xl-3 book-details-img-section">
+                        <img src="<%=obj.thumbnailUrl%>" class="book-details-img" alt="<%=obj.title%>">
+                    </div>
+                    <div class="col-xl-9 book-details-description-section">
+                        <h2 class="book-details-title" id="bookDetailsTitle"><%=obj.title%></h2>
+                        <h5 class="book-details-author" id="bookDetailsAuthor"><%=obj.authors%></h5>
+                        <div class="book-details-review" id="bookDetailsReview">
+                            <div class="book-details-review-rating-stars">
+                                <div class="stars-outer">
+                                    <div class="stars-inner bookRating" style="width:<%=obj.rating*20%>%"></div>
+                                </div>
+                            </div>
+                            <span class="book-details-review-rating"><%=obj.ratingCount%> Ratings |</span>
+                            <span class="book-details-review-comment"><%=obj.commentCount%> Reviews</span>
+                        </div>
+                        <h5 class="book-details-page-count" id="bookDetailsPageCount">Page Count : <%=obj.pageCount%>
+                        </h5>
+                        <div class="book-details-options">
+                            <span class="options-symbol">+</span>
+                            <span class="book-details-options-wishlist" id="addToWishlist">Add to wishlist</span>
+                            <span id="optionsSeparator">|</span>
+                            <span class="options-symbol">@</span>
+                            <span class="book-details-options-writereview" id="writeAReview">Write a review</span>
+                        </div>
+                        <div class="book-price-cart-buy">
+                            <h2 class="book-price-tag">Buy for $<%=obj.buyPrice%></h2><i
+                                class="fas fa-shopping-cart book-cart-btn"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-description">
+                    <h2 class="book-description-heading" id="bookDescriptionHeading">Description</h2>
+                    <h5 class="book-description-content" id="bookDescriptionContent"><%=obj.longDescription%></h5>
+                </div>
+                <div class="book-comments">
+                    <h2 class="book-comments-heading" id="bookCommentsHeading">Customer Reviews</h2>
+                    <span class="book-comments-readall" id="readAllLink">Read All</span>
+                    <div class="book-comments-commentlist">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="reviewModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <h2 class="review-modal-heading" id="reviewModalHeading">Write a Review</h2>
+                    <div class="row">
+                        <div class="col-xl-3 review-modal-book-details">
+                            <img src="<%=obj.thumbnailUrl%>" class="book-details-img" alt="<%=obj.title%>">
+                        </div>
+                        <div class="col-xl-9 review-modal-rating-inputs">
+                            <h5 class="review-modal-comment-title" id="modalCommentTitle">Your Comment</h5>
+                            <textarea class="review-modal-rating-comment" id="modalCommentInput"></textarea>
+                            <p class="empty-comment">Please Enter a comment!</p>
+                            <p class="valid-comment">Comment Added Successfully</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-3 review-modal-book-details">
+                            <h5 class="review-modal-book-title" id="modalBookTitle"><%=obj.title%></h5>
+                            <h5 class="review-modal-book-author" id="modalBookAuthor"><%=obj.authors%></h5>
+                        </div>
+                        <div class="col-xl-9 review-modal-rating-inputs">
+                            <h5 class="review-modal-rating-title" id="modalRatingTitle">Your Rating</h5>
+                            <fieldset class="rating">
+                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5"
+                                    title="Rocks!">5 stars</label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4"
+                                    title="Pretty good">4 stars</label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3"
+                                    title="Meh">3 stars</label>
+                                <input type="radio" id="star2" name="rating" value="2" /><label for="star2"
+                                    title="Kinda bad">2 stars</label>
+                                <input type="radio" id="star1" name="rating" value="1" /><label for="star1"
+                                    title="Sucks big time">1 star</label>
+                            </fieldset>
+                            <div class="close-options">
+                                <button class="btn btn-primary close-options-button" id="closeOptionsButton">Post
+                                    Comment</button>
+                                <span class="close-options-link" id="closeOptionsLink">Cancel Post</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/js/partialjs/UserHeader.js"></script>
+    <script src="/js/usermodule/UserBookPdp.js"></script>
+
+</body>
+
+</html>

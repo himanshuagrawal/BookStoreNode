@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/usermodule/UserBookSearch.css">
+    <link rel="stylesheet" href="/css/partialcss/UserHeader.css">
+    <link rel="stylesheet" href="/css/partialcss/BooksCategories.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+
+<body>
+    <%- include ../partials/UserHeader.ejs%>
+    <div class="container body">
+        <div class="row">
+            <%- include ../partials/BooksCategories.ejs%>
+            <div class="col-xl-9 book-search-result">
+                <h2 class="book-search-heading" id="bookSearchHeading">Search Books</h2>
+                <div class="book-search-row-first">
+                    <div class="book-search-title">
+                        <h5 class="book-search-booktitle-title">Book Title</h5>
+                        <input type="text" class="book-search-title-input" id="bookSearchTitle" />
+                    </div>
+                    <div class="book-search-author">
+                        <h5 class="book-search-author-title">Book Author</h5>
+                        <input type="text" class="book-search-author-input" id="bookSearchAuthor" />
+                    </div>
+                </div>
+                <div class="book-search-row-second">
+                    <div class="book-search-isbn">
+                        <h5 class="book-search-isbn-title">ISBN</h5>
+                        <input type="text" class="book-search-isbn-input" id="bookSearchIsbn" />
+                    </div>
+                    <div class="book-search-category">
+                        <h5 class="book-search-category-title">Book Category</h5>
+                        <select class="book-search-category-input" id="bookSearchCategory">
+                            <%- include ../partials/CategoriesOptions.ejs %>
+                        </select>
+                    </div>
+                </div>
+                <div class="book-result">
+                    <div class="book-container" id="bookContainer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/jquery/jquery.js"></script>
+    <script> src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/js/usermodule/UserBookSearch.js"></script>
+    <script src="/js/partialjs/UserHeader.js"></script>
+</body>
+
+</html>
