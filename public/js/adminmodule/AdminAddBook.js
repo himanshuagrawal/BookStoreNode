@@ -1,4 +1,5 @@
 window.addEventListener('load', function () {
+    
     let form = document.querySelector('.needs-validation');
 
     form.addEventListener('submit', (e) => {
