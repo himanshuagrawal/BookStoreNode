@@ -59,16 +59,4 @@ app.use('/userapi', require('./controllers/api/UserCollectionApi'));
 app.use('/cityapi', require('./controllers/api/CitiesCollectionApi'));
 app.use('/guest', require('./controllers/guestaccount/GuestAccountRouter'));
 app.use('/user',require('./controllers/useraccount/UserAccountRouter'));
-
-// //raw stuff
-// app.get('/', function (request, response) {
-//     request.session.cookie.domain.
-//     response.end();
-// })
-
-app.get('/home/:id', function (request, response) {
-    Request.get(`/api/getbook/${request.params.id}`, function (err, res, body) {
-        response.send(`${JSON.stringify(res.body)}`);
-    });
-    Request.post()
-})
+app.use('/admin',require('./controllers/adminaccount/AdminAccountRouter'));

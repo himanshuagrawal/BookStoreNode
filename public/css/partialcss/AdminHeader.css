@@ -1,0 +1,64 @@
+/*header styling*/
+.container-header{
+    padding: 0px;
+}
+header{
+    background-color: #000000;
+}
+.book-store-image-container{
+    padding: 20px;
+    display: inline-block;
+}
+.book-store-image{
+    height:70px;
+    width: 180px;
+}
+.nav-items-container{
+    padding-top: 26px;
+    padding-right: 20px;
+}
+.welcome-title{
+    font-family: 'Courier New', Courier, monospace;
+    color:white;
+    text-align: right;
+    padding-right: 20px;
+}
+.nav-items{
+    list-style-type: none;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    overflow: hidden;
+}
+.nav-item{
+    font-size: 14px;
+    float: right;
+}
+.nav-links{
+    display: block;
+    padding: 10px 20px;
+}
+.nav-links:hover{
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #bec3c4;
+    color: #000000;
+}
+.cart-icon{
+    padding-left: 20px;
+    position: relative;
+}
+.cart-icon:hover{
+    cursor: pointer;
+}
+.cart-count{
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid #de2728;
+    border-radius: 10px;
+    background-color: #de2728;
+    color: white;
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    padding: 1px;
+}

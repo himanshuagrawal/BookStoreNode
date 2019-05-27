@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/adminmodule/AdminHome.css">
+    <link rel="stylesheet" href="/css/partialcss/AdminHeader.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+
+<body>
+    <%- include ../partials/AdminHeader.ejs %>
+    <div class="container books-list">
+        <div class="row">
+            <div class="col-lg-4">
+                <h1 class="inventory-summary-heading">Inventory Summary</h1>
+            </div>
+            <div class="offset-lg-6 col-lg-2">
+                <button class="btn btn-primary add-books-button">Add Books</button>
+            </div>
+        </div>
+        <div class="row book-items-heading-container">
+            <div class="col-lg-3">
+                <h5 class="book-items-headings">Category</h5>
+            </div>
+            <div class="col-lg-4">
+                <h5 class="book-items-headings">Book Name</h5>
+            </div>
+            <div class="col-lg-3">
+                <h5 class="book-items-headings">Author</h5>
+            </div>
+            <div class="col-lg-1">
+                <h5 class="book-items-headings">Edit</h5>
+            </div>
+            <div class="col-lg-1">
+                <h5 class="book-items-headings">Delete</h5>
+            </div>
+        </div>
+        <div class="book-items-container">
+        </div>
+    </div>
+    <script src="/js/jquery/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/js/partialjs/AdminHeader.js"></script>
+    <script src="/js/adminmodule/AdminHome.js"></script>
+</body>
+
+</html>

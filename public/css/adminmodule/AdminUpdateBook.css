@@ -1,0 +1,56 @@
+body{
+    background-color: #cacfd0;
+}
+
+/* Main add book form styling...*/
+.add-book-form{
+    background-color: #dfe5e6;
+    padding-top: 40px;
+}
+.add-book-form-heading{
+    padding-left: 35px;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+.add-book-heading-container{
+    border-bottom: 1px dashed #cacfd0;
+}
+/* form body edititng */
+.register-form{
+    padding-top: 30px;
+    padding-left: 50px;
+    width: 100%;
+}
+
+/*form labels and inputs styling*/
+.form-group{
+    margin-bottom: 32px;
+}
+.col-form-label{
+    font-size: 15px;
+    color: #1d1d1d;
+}
+.form-control{
+    display: inline-block;
+    width: 50%;
+    border-radius: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f5f5f5;
+}
+.required-star{
+    color: #de2728;
+}
+.updateBookButton{
+    border-radius: 0px;
+    font-size: 22px;
+}
+.cancelBookButton{
+    border-radius: 0px;
+    font-size: 22px;
+}
+.form-text{
+    font-size: 12px;
+}
+#reTypePasswordSmall , #preferredLoginNameSmall{
+    color: #de2728;
+}

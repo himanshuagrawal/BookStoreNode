@@ -40,4 +40,19 @@ router.get('/getsearchedbooks',function(request,response){
     books.getSearchedBooks(response,searchCriteria,sort);
 })
 
+//adding a book to the database
+router.post('/addbooktodb',function(request,response){
+    books.addBook(response,request.body);
+})
+
+//deleting a book from the database
+router.get('/deletebookfromdb',function(request,response){
+    books.deleteBook(response,request.query.bookId);
+})
+
+//update book in the db
+router.post('/updatebookindb',function(request,response){
+    books.updateBook(response,request.query.bookid,request.body);
+})
+
 module.exports = router;

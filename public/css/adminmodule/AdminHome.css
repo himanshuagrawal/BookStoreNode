@@ -1,0 +1,37 @@
+body{
+    background-color: #cacfd0;
+}
+
+/* Main Body Styling*/
+.books-list{
+    background-color: #dfe5e6;
+    padding-top: 40px;
+}
+.inventory-summary-heading{
+    padding-left: 15px;
+    font-size: 25px;
+}
+.add-books-button{
+    font-size: 18px;
+    margin-left: 20px;
+    border-radius: 0px;
+}
+.book-items-heading-container{
+    margin-top: 40px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed  #cacfd0;
+}
+.book-items-container{
+    margin-top: 10px;
+}
+.book-items-container-row{
+    text-align: center;
+}
+
+.fa-pen{
+    cursor: pointer;
+}
+.fa-trash{
+    cursor: pointer;
+}

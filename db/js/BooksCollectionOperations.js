@@ -54,6 +54,24 @@ class booksCollection {
             res.send(result);
         })
     }
+    addBook(res,obj){
+        let newBook = new book(obj);
+        newBook.save().then(()=>{
+            res.send("Book Added Successfully");
+        })
+    }
+    deleteBook(res,bookId){
+        book.findByIdAndDelete(bookId).then(()=>{
+            res.send("Book Deleted Successfully");
+        });
+    }
+    updateBook(res,bookId,obj){
+        book.findById(bookId).then((result)=>{
+            result.updateOne(obj).then(()=>{
+                res.send("Book Updated Successfully...!");
+            })
+        })
+    }
 }
 
 module.exports = new booksCollection();

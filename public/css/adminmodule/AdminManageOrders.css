@@ -1,0 +1,45 @@
+body{
+    background-color: #cacfd0;
+}
+
+/* Main Body Styling*/
+.orders-list{
+    background-color: #dfe5e6;
+    padding-top: 40px;
+    min-height: 1000px;
+}
+.order-summary-heading{
+    padding-left: 15px;
+    font-size: 25px;
+}
+.order-items-heading-container{
+    margin-top: 40px;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border: 1px dashed  #cacfd0;
+}
+.col-lg-2,.col-lg-1{
+    padding: 0px;
+}
+.order-items-container-row{
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border: 1px dashed  #cacfd0;
+    border-top: none;
+}
+input[type="checkbox"]{
+    width: 18px; /*Desired width*/
+    height: 18px; /*Desired height*/
+    cursor: pointer;
+}
+.dispatch-slip{
+    border-radius: 0px;
+    padding: 5px;
+}
+.update-status-btn{
+    border-radius: 0px;
+    margin-left: 20px;
+    margin-top: 20px;
+}

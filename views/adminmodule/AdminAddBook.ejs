@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/adminmodule/AdminAddBook.css">
+    <link rel="stylesheet" href="/css/partialcss/AdminHeader.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-storage.js"></script>
+</head>
+
+<body>
+    <%- include ../partials/AdminHeader.ejs %>
+    <div class="container add-book-form">
+        <div class="row add-book-heading-container">
+            <div class="col-lg-5">
+                <h1 class="add-book-form-heading">Add Book To Store</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="register-form">
+                <form class="needs-validation" novalidate>
+                    <div class="form-group row">
+                        <label for="bookTitle" class="col-sm-3 col-form-label">Book Thumbnail Image<span
+                                class="required-star">*</span></label>
+                        <div class="col-sm-9">
+                            <input type="file" name="Choose Image" id="image" placeholder="Book image" required />
+                            <div class="invalid-feedback image-needed">
+                                Please select an image
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="bookTitle" class="col-sm-3 col-form-label">Book Title<span
+                                class="required-star">*</span></label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="bookTitle" style="width:60%" required>
+                            <div class="invalid-feedback">
+                                Please enter book title
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="bookAuthor" class="col-sm-3 col-form-label">Book Author<span
+                                class="required-star">*</span></label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="bookAuthor" required>
+                            <div class="invalid-feedback">
+                                Please enter Book Auhtor Name
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="isbn" class="col-sm-3 col-form-label">ISBN<span
+                                class="required-star">*</span></label>
+                        <div class="col-sm-8">
+                            <input type="text" pattern="\d*" class="form-control" id="isbn" maxlength="10" required>
+                            <div class="invalid-feedback">
+                                Please enter a valid isbn number.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="category" class="col-sm-3 col-form-label">Select Category</label>
+                        <div class="col-sm-8">
+                            <select class="form-control" id="category">
+                                <%- include ../partials/CategoriesOptions.ejs %>
+                                <option value="Others" selected>Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="buyPrice" class="col-sm-3 col-form-label">Buy Price<span
+                                class="required-star">*</span></label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" pattern="\d*" id="buyPrice" maxlength="4" required>
+                            <div class="invalid-feedback">
+                                Buy Price can't be empty nor can't be a string.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="numberOfBooks" class="col-sm-3 col-form-label">Number of Books<span
+                                class="required-star">*</span></label>
+                        <div class="col-sm-3">
+                            <input type="text" pattern="\d*" class="form-control" id="numberOfBooks" maxlength="3" required>
+                            <div class="invalid-feedback">
+                                Number of Books Cannot be empty nor can't be a string.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="numberOfPages" class="col-sm-3 col-form-label">Number of Pages</label>
+                        <div class="col-sm-3">
+                            <input type="text" pattern="\d*" class="form-control" id="numberOfPages" maxlength="4">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="shortDescription" class="col-sm-3 col-form-label">Short Description</label>
+                        <div class="col-sm-8">
+                            <textarea type="text" class="form-control" id="shortDescription" rows=5></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="longDescription" class="col-sm-3 col-form-label">Long Description</label>
+                        <div class="col-sm-8">
+                            <textarea type="text" class="form-control" id="longDescription" rows=10></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2 offset-sm-3">
+                            <button type="submit" class="btn btn-primary addToBookButton">Add to Store</button>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-primary cancelBookButton">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyDiWan1HoxlKHJnYeHPJPVjjjSXRg2qjcg",
+            authDomain: "bookstore-70c5d.firebaseapp.com",
+            databaseURL: "https://bookstore-70c5d.firebaseio.com",
+            projectId: "bookstore-70c5d",
+            storageBucket: "bookstore-70c5d.appspot.com",
+            messagingSenderId: "71725358613",
+            appId: "1:71725358613:web:5434afc429027264"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const STORE = firebase.storage();
+    </script>
+    <script src="/js/jquery/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/js/partialjs/AdminHeader.js"></script>
+    <script src="/js/adminmodule/AdminAddBook.js"></script>
+</body>
+
+</html>
