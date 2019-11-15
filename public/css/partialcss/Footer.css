@@ -1,0 +1,23 @@
+/*footer styling*/
+.container-footer{
+    padding: 0px;
+}
+footer{
+    background-color: #000000;
+}
+.footer-row{
+    text-align: center;
+    padding: 30px 42%;
+}
+.footer-link{
+    color: white !important;
+    font-size: 15px;
+}
+.footer-link:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+.divider{
+    color:white;
+    padding: 0px 5px;
+}

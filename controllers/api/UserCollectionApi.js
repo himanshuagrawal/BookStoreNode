@@ -25,6 +25,9 @@ router.post('/adduser', function (request, response) {
     users.addUser(response, request.body);
 });
 
+router.post('/authenticateuserbythirdpartyid',function(request,response){
+    users.authenticateUserByThirdPartyID(request,response,request.body);
+})
 
 //api's which need authentication
 
@@ -32,6 +35,10 @@ router.post('/adduser', function (request, response) {
 router.get('/getuser', function (request, response) {
     users.getUser(response, request.query.userId);
 });
+
+router.get('/getallusers',function(request,response){
+    users.getAllUsers(response);
+})
 
 router.post('/updateuser/:userId',function(request,response){
     users.updateUser(response,request.params.userId,request.body);

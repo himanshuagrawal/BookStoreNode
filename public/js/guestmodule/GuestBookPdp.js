@@ -11,6 +11,9 @@ window.addEventListener('load', function () {
             return response.json();
         }).then(function (data) {
             comments = Array.from(data).reverse();
+            if(comments.length>5){
+                document.querySelector('.book-comments-readall').style.display="inline";
+            }
             loadComments();
         });
 
@@ -25,7 +28,6 @@ window.addEventListener('load', function () {
 
     //read All Link listener
     document.querySelector('.book-comments-readall').addEventListener('click',function(){
-        document.querySelector('.book-description').style.display="none";
         window.addEventListener('scroll', function () {
             let key = $(window).scrollTop() + $(window).height();
             let dockey = $(document).height();

@@ -24,6 +24,19 @@ class userCollection {
             });
     }
 
+    authenticateUserByThirdPartyID(req,res,obj){
+        user.find({'thirdPartyID':obj.thirdPartyID}).then((data)=>{
+            if(data.length===0){
+                new user(obj).save().then((result)=>{
+                    console.log(result);
+                    res.send(result);
+                })
+            }else{
+                res.send(data[0]);
+            }
+        })
+    }
+
     checkPreferredUserName(res, name) {
         user.find({ 'preferredLoginName': name })
             .then(function (result) {
@@ -42,6 +55,12 @@ class userCollection {
                 this.getUserByName(res, userObj);
             });
     };
+
+    getAllUsers(res){
+        user.find().then((result)=>{
+            res.send(result);
+        })
+    }
 
     getUser(res, userId) {
         user.findById(userId)

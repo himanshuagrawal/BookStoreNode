@@ -2,9 +2,9 @@ window.addEventListener('load', function () {
     let books;
     let count = 0;
     let bookContainer = document.querySelector('#bookContainer');
-    if(location.hash===""){
-    getAllBooks();
-    }else{
+    if (location.hash === "") {
+        getAllBooks();
+    } else {
         populateCategoryBooks();
     }
 
@@ -18,11 +18,11 @@ window.addEventListener('load', function () {
         })
     }
 
-    function populateCategoryBooks(){
+    function populateCategoryBooks() {
         let category;
         category = location.hash.slice(1);
         getCategoryBooks(category);
-        document.querySelector('#bookResultHeading').textContent=decodeURIComponent(category);
+        document.querySelector('#bookResultHeading').textContent = decodeURIComponent(category);
     }
 
     function makeBook(item) {
@@ -69,7 +69,7 @@ window.addEventListener('load', function () {
         cart.classList.add('fas');
         cart.classList.add('fa-shopping-cart');
         cart.classList.add('book-cart-btn');
-        price.textContent=`$${item.buyPrice}`;
+        price.textContent = `$${item.buyPrice}`;
         priceCartWrapper.append(price);
         priceCartWrapper.append(cart);
 
@@ -84,7 +84,7 @@ window.addEventListener('load', function () {
             bookTitle.textContent = item.title;
         }
 
-        if (item.authors[0]!==undefined&&item.authors[0].length > 20) {
+        if (item.authors[0] !== undefined && item.authors[0].length > 20) {
             bookAuthor.textContent = item.authors[0].slice(0, 15) + " ...";
         } else {
             bookAuthor.textContent = item.authors[0];
@@ -126,32 +126,40 @@ window.addEventListener('load', function () {
         }
     }
     //listeners
+    window.addEventListener('scroll', function () {
+        let key = $(window).scrollTop() + $(window).height();
+        let dockey = $(document).height();
+        let y = dockey - key;
+        if (y <= 200) {
+            addBooks();
+        }
+    });
 
     //adding books categories listener
     document.querySelector('.book-categories-list').addEventListener('click', function (event) {
-        if(event.target.tagName==='A'){
-            if(!location.href.includes("/home")){
-                location.href=`/guest/home#${event.target.textContent}`;
+        if (event.target.tagName === 'A') {
+            if (!location.href.includes("/home")) {
+                location.href = `/guest/home#${event.target.textContent}`;
             };
-            Array.from(this.children).forEach(function(item){
+            Array.from(this.children).forEach(function (item) {
                 item.style.backgroundColor = '#ffffff';
             });
             let category;
-            setTimeout(function(){
+            setTimeout(function () {
                 category = location.hash.slice(1);
                 getCategoryBooks(category);
-                event.target.style.backgroundColor= '#dfe5e6';
-                document.querySelector('#bookResultHeading').textContent=decodeURIComponent(category);
-            },0);
+                event.target.style.backgroundColor = '#dfe5e6';
+                document.querySelector('#bookResultHeading').textContent = decodeURIComponent(category);
+            }, 0);
         }
     });
 
     //adding to cart button from homepage listener
-    document.querySelector('.book-result').addEventListener('click',function(event){
-        if(event.target.tagName==="I"){
-        event.preventDefault();
-        $('#loginModal').modal('show');
-    };
+    document.querySelector('.book-result').addEventListener('click', function (event) {
+        if (event.target.tagName === "I") {
+            event.preventDefault();
+            $('#loginModal').modal('show');
+        };
     });
 
 })

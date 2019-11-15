@@ -3,7 +3,7 @@ const Request = require('Request');
 const uri = "http://localhost:3001";
 
 const checkUser = function(req,res,next){
-    if(req.session.user){
+    if(req.session.login){
         next();
     }else{
         res.redirect('/guest/home');
@@ -30,6 +30,14 @@ router.get('/shippingadressconfirmation',checkUser, function (request, response)
 
 router.get('/wishlist',checkUser, function (request, response) {                //doubt please make it clear
     response.render('UserWishList.ejs');
+});
+
+router.get('/account',checkUser, function (request, response) {
+    response.render('UserAccount.ejs');
+});
+
+router.get('/orderconfirmation',checkUser,function(request,response){
+    response.render('UserOrderConfirmation.ejs');
 });
 
 router.get('/account',checkUser, function (request, response) {

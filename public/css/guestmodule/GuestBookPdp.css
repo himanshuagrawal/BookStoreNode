@@ -43,6 +43,7 @@ body{
     text-decoration: underline;
 }
 .book-details-review-comment:hover{
+    font-size: 100%;
     cursor: pointer;
 }
 .book-details-page-count{
@@ -105,8 +106,10 @@ cursor: pointer;
     font-size: 12px;
     color: #de2728;
     text-decoration: underline;
+    display: none;
 }
 .book-comments-readall:hover{
+    font-size: 100%;
     cursor: pointer;
 }
 .book-comments-commentlist-comment{
@@ -130,6 +133,10 @@ cursor: pointer;
     line-height: 1.5;
     padding-top: 10px;
 }
+.book-details-options-wishlist:hover, .book-details-options-writereview:hover{
+    cursor: pointer;
+    font-size: 100%;
+    }
 
 
 /* Modal Pops Up and its content*/
@@ -202,9 +209,11 @@ cursor: pointer;
     margin-top: 25px;
     background-color: #21addd;
     width: 32%;
+    transition: transform .3s;
 }
 .book-price-cart-buy:hover{
 cursor: pointer;
+transform: scale(1.1);
 }
 .book-price-tag{
     margin-bottom: 0px;

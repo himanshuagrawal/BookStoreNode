@@ -1,4 +1,11 @@
 window.addEventListener('load',function(){
+    //google listener
+    $('.google-register-button').on('click',()=>{
+        location.href="/guest/auth/google";
+    })
+    $('.facebook-register-button').on('click',()=>{
+        location.href="/guest/auth/facebook";
+    })
     //header listener
     document.querySelector('#welcomeTitleUsername').textContent = "Guest";
     let elements = document.getElementsByClassName('loginModal');

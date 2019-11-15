@@ -101,7 +101,7 @@ window.addEventListener('load', function () {
     }
 
     //displaying cities based on 
-    
+
     state.addEventListener('change', function () {
         while (city.firstChild) {
             city.removeChild(city.firstChild);
@@ -130,38 +130,38 @@ window.addEventListener('load', function () {
             document.querySelector('#reTypePasswordSmall').style.display = "none"
         }
     });
-    
+
 
 
     /*-------------------------------------------------------------------------------------------------------------------------*/
 
     //transaction history functionality
-    function getTransactionHistory(){
-        Array.from(user.ordered).reverse().forEach(function(item){
+    function getTransactionHistory() {
+        Array.from(user.ordered).reverse().forEach(function (item) {
             getTransactionHistoryItemDetails(item);
         })
     }
 
     // getting details of the transaction history items called by getTransactionHistory
-    function getTransactionHistoryItemDetails(item){
+    function getTransactionHistoryItemDetails(item) {
         fetch(`/bookapi/getbook/${item.bookId}`)
-        .then(function(response){
-            return response.json();
-        })
-        .then(function(bookData){
-            makeItem(item,bookData);
-        })
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (bookData) {
+                makeItem(item, bookData);
+            })
     }
 
     //making transaction history items called by gettransactionHistoryItemDetails
-    function makeItem(item,bookData){
+    function makeItem(item, bookData) {
         let itemRow = document.createElement('div');
         $(itemRow).addClass('row th-book-row');
 
         let imgContainer = document.createElement('div');
         $(imgContainer).addClass('col-sm-2 book-image-container');
         let img = document.createElement('img');
-        $(img).addClass('book-image').attr('src',bookData.thumbnailUrl);
+        $(img).addClass('book-image').attr('src', bookData.thumbnailUrl);
         imgContainer.append(img);
 
         let titleAuthorContainer = document.createElement('div');
@@ -176,7 +176,7 @@ window.addEventListener('load', function () {
         let priceContainer = document.createElement('div');
         $(priceContainer).addClass('col-sm-1 book-price-container');
         let price = document.createElement('h2');
-        $(price).addClass('book-price').text(`$ ${bookData.buyPrice*item.numberOfBooks}`);
+        $(price).addClass('book-price').text(`$ ${bookData.buyPrice * item.numberOfBooks}`);
         priceContainer.append(price);
 
         let qtyContainer = document.createElement('div');
@@ -212,25 +212,39 @@ window.addEventListener('load', function () {
 
     // edit profile functionality
     function setInitialValues() {
-        fullName.setAttribute('value', user.fullName);
+            fullName.setAttribute('value', user.fullName);
         fullName.disabled = true;
+        if (user.preferredLoginName) {
         prefFullName.setAttribute('value', user.preferredLoginName);
+        }
         prefFullName.disabled = true;
+        if (user.password) {
         loginPassword.setAttribute('value', user.password);
+        }
         loginPassword.disabled = true;
+        if (user.email) {
         email.setAttribute('value', user.email);
+        }
         email.disabled = true;
+        if (user.address1) {
         address1.setAttribute('value', user.address1);
+        }
         address1.disabled = true;
+        if (user.address2) {
         address2.setAttribute('value', user.address2);
+        }
         address2.disabled = true;
         state.value = user.state;
         state.disabled = true;
         city.value = user.city;
         city.disabled = true;
+        if (user.phoneNumber) {
         phoneNumber.setAttribute('value', user.phoneNumber);
+        }
         phoneNumber.disabled = true;
+        if (user.mobileNumber) {
         mobileNumber.setAttribute('value', user.mobileNumber);
+        }
         mobileNumber.disabled = true;
         document.querySelector('.edit-info').style.display = "block";
         document.querySelector('.update-info').style.display = "none";
@@ -282,10 +296,10 @@ window.addEventListener('load', function () {
     })
 
     //Tab Switching and displaying the relevant tab
-    $('.transactionHistory').on('click', ()=>{openTab(event,"transactionHistory")});
-    $('.editInformation').on('click', ()=>{openTab(event,"editInformation")});
-    $('.orderStatusTracking').on('click', ()=>{openTab(event,"orderStatusTracking")});
-    function openTab(event,tabName) {
+    $('.transactionHistory').on('click', () => { openTab(event, "transactionHistory") });
+    $('.editInformation').on('click', () => { openTab(event, "editInformation") });
+    $('.orderStatusTracking').on('click', () => { openTab(event, "orderStatusTracking") });
+    function openTab(event, tabName) {
         let i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {

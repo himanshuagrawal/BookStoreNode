@@ -18,6 +18,7 @@ var OrderedBooksSchema = new Schema({
     orderId:Number
 });
 var UserSchema = new Schema({
+    thirdPartyID:Number,
     fullName:String,
     preferredLoginName:String,
     password:String,

@@ -1,6 +1,4 @@
 window.addEventListener('load', function () {
-
-
     let user;
     let userId;
     getUserDetails().then(function (data) {

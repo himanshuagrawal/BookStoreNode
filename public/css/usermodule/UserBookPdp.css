@@ -43,6 +43,7 @@ body{
     text-decoration: underline;
 }
 .book-details-review-comment:hover{
+    font-size: 100%;
     cursor: pointer;
 }
 .book-details-page-count{
@@ -107,6 +108,7 @@ font-size: 100%;
     text-decoration: underline;
 }
 .book-comments-readall:hover{
+    font-size: 100%;
     cursor: pointer;
 }
 .book-comments-commentlist-comment{

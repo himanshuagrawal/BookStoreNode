@@ -3,6 +3,10 @@ const express = require('express');
 const app = express();
 app.listen(3001, () => { console.log(`Connected to the server`) });
 
+//importing passport
+const passportSetup = require('./config/passport-setup');
+const passport = require('passport');
+
 //importing cookie-parser module for interacting between frontend nd backend
 const cookie = require('cookie-parser');
 
@@ -41,6 +45,9 @@ app.use(session({
     saveUninitialized:false,
     secret:"Hey There it is the book store"
 }))
+
+// using passport 
+app.use(passport.initialize());
 
 //mentioning not to save cookies and all everytym it should do a new refresh
 app.use(function (req, res, next) {
